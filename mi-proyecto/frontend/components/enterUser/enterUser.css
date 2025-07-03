@@ -1,0 +1,23 @@
+body{
+    background-color: #16697a  ;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.h2-dni{
+    font-size: 1.9em;
+color: #ede7e3;
+padding-top: 100px;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+}
+.button-enviar{
+    max-width: 80px;
+}

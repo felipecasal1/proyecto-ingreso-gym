@@ -1,0 +1,16 @@
+.container-links-admin-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+.links-adminCenter{
+    color: #ede7e3;
+    border: solid #ffa623 5px;
+    margin: 4px;
+    padding: 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.4em;
+}
