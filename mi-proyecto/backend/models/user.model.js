@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import mongoosePaginate from "mongoose-paginate-v2"
+
 
 const userSchema = new mongoose.Schema({
     
@@ -19,13 +19,14 @@ const userSchema = new mongoose.Schema({
     dni: {
         type: Number,
         required: true,
+        unique: true, 
     },
     fechaDeIngreso: {
         dia: {
             type: Number,
 
         },
-        mes: {
+        mesActualizado: {
             type: Number,
 
         },
@@ -33,20 +34,14 @@ const userSchema = new mongoose.Schema({
             type: Number,
 
         }
+    },
+    valorSeleccionado:{
+        type: String,
+
+        required: true,
     }
 
 });
-/*
-mongoosePaginate.paginate.options = {
-    customLabels: {
-        offset: false,
-        page:"currentPage",
-        pagingCounter:false,
-        totalDocs:false
-    }
-}
-productSchema.plugin(mongoosePaginate)
-*/
 
 const userModel = mongoose.model("users", userSchema);
 

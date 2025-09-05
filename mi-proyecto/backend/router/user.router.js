@@ -51,7 +51,7 @@ router.get("/userByDni/:dni", async (req,res) =>{
 router.post('/frontend', async (req, res) => {
     
     try {
-        let { nombre, apellido, email, dni , fechaDeIngreso} = req.body;
+        let { nombre, apellido, email, dni , fechaDeIngreso, valorSeleccionado} = req.body;
         // Convertir dni a número
         console.log("Datos recibidos:", req.body);
 
@@ -64,7 +64,8 @@ router.post('/frontend', async (req, res) => {
             apellido, 
             email, 
             dni: Number(dni),
-            fechaDeIngreso
+            fechaDeIngreso,
+            valorSeleccionado
 
         };
         let usuarioGuardado = await userModel.create(nuevoUsuario);
